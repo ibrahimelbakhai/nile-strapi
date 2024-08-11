@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "equipments",
+  "info": {
+    "singularName": "item",
+    "pluralName": "equipments",
+    "displayName": "Equipment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "station": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::station.station",
+      "inversedBy": "equipment"
+    },
+    "Code": {
+      "type": "string"
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Cars",
+        "Generators",
+        "Pumps",
+        "Trucks"
+      ]
+    },
+    "Chassis_number": {
+      "type": "string"
+    },
+    "Motor_number": {
+      "type": "string"
+    },
+    "Plate_number": {
+      "type": "string"
+    },
+    "Model": {
+      "type": "string"
+    },
+    "License_renewal_date": {
+      "type": "date"
+    },
+    "Equipment_type": {
+      "type": "enumeration",
+      "enum": [
+        "خلاطه افيكو",
+        "مضخه 34",
+        "مضخه48",
+        "دبابه خدمه",
+        "ملاكي فيرنا",
+        "مضخه 46",
+        "خلاطه اكتروس",
+        "لودر 950 B",
+        "كلارك TCM ",
+        "خلاطة 10م"
+      ]
+    }
+  }
+}

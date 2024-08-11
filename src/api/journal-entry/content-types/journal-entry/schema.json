@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "journal_entries",
+  "info": {
+    "singularName": "journal-entry",
+    "pluralName": "journal-entries",
+    "displayName": "JournalEntry"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Active",
+        "Inactive"
+      ]
+    },
+    "Date": {
+      "type": "date"
+    },
+    "station": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::station.station",
+      "inversedBy": "journal_entries"
+    },
+    "EquipmentType": {
+      "type": "enumeration",
+      "enum": [
+        "Mixer",
+        "Pump",
+        "Truck",
+        "Loader."
+      ]
+    },
+    "EquipmentId": {
+      "type": "string"
+    },
+    "Productivity": {
+      "type": "float"
+    },
+    "NumberOfTrips": {
+      "type": "integer"
+    },
+    "OilConsumption": {
+      "type": "float"
+    },
+    "BakamOilConsumption": {
+      "type": "float"
+    },
+    "SolarConsumption": {
+      "type": "decimal"
+    },
+    "TrafficViolation": {
+      "type": "decimal"
+    },
+    "HeadOfMovement": {
+      "type": "string"
+    },
+    "Driver": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "AttachedDocuments": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

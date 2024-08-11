@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "maintenances",
+  "info": {
+    "singularName": "maintenance",
+    "pluralName": "maintenances",
+    "displayName": "Maintenance"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Periodic maintenance",
+        "Preventive maintenance",
+        "Internal maintenance",
+        "External maintenance",
+        "electricity",
+        "metalworks",
+        "Gear maintenance",
+        "Complete motor reconstruction"
+      ]
+    }
+  }
+}
